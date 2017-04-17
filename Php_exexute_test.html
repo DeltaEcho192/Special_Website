@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<button type="submit" id="script-button">
+    Run the script
+</button>
+
+<script>
+function runScript() {
+var promise = $.getJSON("http://192.168.0.116/php/Php_hashing_test.php");
+
+promise.done(function(data) {
+    console.log(data);
+    // this will return back "text that needs to be in javascript"
+})
+};
+
+document.getElementById('script-button').onclick = runScript;
+</script>
+
+</body>
+</html>
